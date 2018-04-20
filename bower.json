@@ -1,0 +1,10 @@
+{
+  "name": "polymer-training-cern-spring-campus-2018",
+  "description": "Demo code for the Polymer 2.0 in Action presentation at the CERN Spring Campus 2018 in Riga",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
+	"google-map": "google-map#^2.0.4",
+	"iron-ajax": "iron-ajax#^2.1.3"
+  }
+}

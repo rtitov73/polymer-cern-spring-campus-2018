@@ -1,0 +1,33 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="country-finder">
+    <template>
+        <style>
+            h1 { font-size: 1.2em; margin: 0; }
+            input { margin: 1em 0 }
+            .country-finder { border: 1px solid black; border-radius: 6pt; padding: 2em; width: 20%; min-width: 200px; background-color: #eee }
+            .capital { color: brown }
+        </style>
+        <div class="country-finder">
+            <h1>Find a country by its capital</h1>
+            <input type="text" id="capitalInput" value="{{inputValue::input}}" placeholder="Enter a capital" autofocus>
+
+            <iron-ajax
+                    auto
+                    url="https://restcountries.eu/rest/v2/capital/{{inputValue}}"
+                    last-response="{{data}}">
+            </iron-ajax>
+
+            <template is="dom-repeat" items="{{data}}" as="country">
+                <div><span class="capital">{{country.capital}}</span> - {{country.name}}</div>
+            </template>
+        </div>
+    </template>
+    <script>
+        class CountryFinder extends Polymer.Element {
+            static get is() { return "country-finder"; }
+        }
+        customElements.define(CountryFinder.is, CountryFinder);
+    </script>
+</dom-module>

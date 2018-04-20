@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="bower_components/polymer/lib/elements/dom-bind.html">
+    <link rel="import" href="fancy-input-new/fancy-input.html">
+    <link rel="import" href="fancy-greeting/fancy-greeting.html">
+</head>
+
+<body>
+    <dom-bind>
+        <template>
+            <fancy-input initial-value="Slava" value="{{value}}" placeholder="Enter name"></fancy-input>
+            <fancy-greeting name="[[value]]"></fancy-greeting>
+        </template>
+    </dom-bind>
+</body>
+
+</html>

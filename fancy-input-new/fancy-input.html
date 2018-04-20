@@ -1,0 +1,36 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="fancy-input">
+    <template>
+        <input type="text" value="{{value::input}}" placeholder="{{placeholder}}" autofocus>
+    </template>
+    <script>
+        class FancyInput extends Polymer.Element {
+            static get is() {
+                return "fancy-input";
+            }
+
+            ready() {
+                super.ready();
+                this.value = this.initialValue;
+            }
+
+            static get properties() {
+                return {
+                    initialValue: {
+                        type: String
+                    },
+                    placeholder: {
+                        type: String
+                    },
+                    value: {
+                        type: String,
+                        notify: true
+                    }
+                };
+            }
+
+        }
+        customElements.define(FancyInput.is, FancyInput);
+    </script>
+</dom-module>

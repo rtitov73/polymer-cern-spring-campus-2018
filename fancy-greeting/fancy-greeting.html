@@ -1,0 +1,25 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="fancy-greeting">
+    <template>
+        <p>Hello, {{_computeName(name)}}!</p>
+    </template>
+    <script>
+        class FancyGreeting extends Polymer.Element {
+            static get is() { return "fancy-greeting"; }
+
+            static get properties() {
+                return {
+                    name: {
+                        type: String
+                    }
+                };
+            }
+
+            _computeName(name) {
+                return name ? name : 'stranger';
+            }
+        }
+        customElements.define(FancyGreeting.is, FancyGreeting);
+    </script>
+</dom-module>

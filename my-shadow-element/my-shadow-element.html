@@ -1,0 +1,21 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="my-shadow-element">
+    <template>
+        <style>
+            h1 { color: blue }
+        </style>
+        <div>
+            <h1>Title 2</h1>
+            <p>Shadow Text</p>
+        </div>
+    </template>
+    <script>
+        class MyShadowElement extends Polymer.Element {
+            static get is() {
+                return "my-shadow-element";
+            }
+        }
+        customElements.define(MyShadowElement.is, MyShadowElement);
+    </script>
+</dom-module>

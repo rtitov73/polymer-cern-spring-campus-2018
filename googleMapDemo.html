@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Polyfill Web Components support for older browsers -->
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <!-- Import element -->
+    <link rel="import" href="bower_components/google-map/google-map.html">
+
+    <!-- Set map height -->
+    <style>
+        google-map { height: 600px; }
+    </style>
+</head>
+
+<body>
+  <h1>Welcome to the CERN Spring Campus 2018!</h1>
+  <google-map latitude="56.9473" longitude="24.1052" api-key="" zoom="15">
+      <google-map-marker latitude="56.947322" longitude="24.105199" title="RTU"></google-map-marker>
+  </google-map>
+</body>
+
+</html>
